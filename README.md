@@ -1,0 +1,73 @@
+# Aatmiyata Kalyan
+
+A responsive, accessible static NGO website with a soft ivory and olive palette, locally stored Buddha imagery, community celebrations, nursery information, and Vihar visitor information.
+
+## Run
+
+Requires Node.js. No dependencies to install.
+
+```sh
+npm run dev
+```
+
+Open http://localhost:5173. Set `PORT` to change the port. Run `npm run check` to validate JavaScript syntax. For deployment, serve `index.html`, `style.css`, `app.js`, and `assets/` using any static host. Google Fonts are optional; system fonts provide a fallback.
+
+## Content
+
+Edit page content in `index.html` and celebration detail text in `app.js`. Observance dates are not announced event schedules. The map links to the village rather than claiming an exact Vihar pin. Add verified contact details, programme timings, real activity photographs, and donation information when available. No payments or personal data are collected. The hero image is illustrative AI-generated imagery, not a photograph of the NGO's actual Vihar.
+
+## Image asset
+
+Generated using the built-in image generation tool. Original: `assets/buddha.png`. Optimized website version: `assets/buddha.jpg`.
+
+Final generation prompt:
+
+> Use case: photorealistic-natural. Asset type: full-width hero background for a peace and Dhamma NGO website. Wide landscape 1536x1024 editorial photograph of a beautiful pale sandstone seated Buddha statue with serene face and closed eyes, statue occupies the right 45 percent of frame, upper body and crossed legs visible, surrounded by soft woodland foliage and a few delicate leaves. Left half is pale warm ivory mist with softly blurred trees, clear negative space for dark text. Quiet morning sunlight, muted sage olive greens, warm cream, subtle natural grain. Elegant, peaceful, realistic stone texture. No text, no logos, no watermarks.
+
+## Verification
+
+JavaScript syntax checks and internal anchor checks passed. In-app browser verification was unavailable in the development session; visual and interactive browser QA remains to be performed.
+
+## Languages
+
+Use the EN / मराठी header toggle to switch between English and Marathi. The preference is stored locally when browser storage is available. Static translations and celebration details live in `i18n.js`; keep them updated when changing English content. The toggle updates the document language, title, description, and accessibility labels. Devanagari font fallbacks are included for offline use.
+
+## Dhamma card image
+
+Generated with the built-in image generation tool. Saved original: `assets/dhamma-buddha.png`; optimized site asset: `assets/dhamma-buddha.jpg`. The card preserves the image’s 3:2 ratio to show the complete statue on desktop and mobile. This is illustrative imagery.
+
+Final generation prompt:
+
+> Use case: photorealistic-natural. Asset type: landscape image for a small NGO website card titled A home for Dhamma. Create a serene pale ivory sandstone seated Buddha statue, centered, complete head and crossed legs fully visible, generously framed with 20 percent clear breathing room above head and below pedestal. Wide landscape 3:2 composition. Statue occupies central half of frame, calm face with closed eyes, respectful traditional Buddhist sculpture. Softly blurred sage green garden foliage, warm cream stone ground, diffuse morning sunlight. Muted olive, ivory, warm white palette, quiet natural editorial photography, refined realistic stone texture. Image must remain nicely framed when cropped to a wide 1.7:1 card. No text, no logos, no watermark. Illustrative setting, not a specific real temple.
+
+## Community tile portrait
+
+Built-in image generation produced the illustrated Dr. Babasaheb Ambedkar portrait. Original: `assets/ambedkar.png`. Optimized site image: `assets/ambedkar.jpg`. Uses a 3:2 frame and an English/Marathi accessible label.
+
+Final generation prompt:
+
+> Create a respectful, recognizable painted portrait of Dr. Bhimrao Ramji Ambedkar (Dr. Babasaheb Ambedkar), Indian constitutional scholar and social reformer, with his distinctive round glasses, neatly combed black hair, clean-shaven face, blue suit, white shirt and tie, holding a plain closed book with no visible text. Landscape 3:2 composition for an NGO community website card. Chest-up portrait centered, full head visible with ample space above, dignified calm expression. Refined realistic editorial painting with subtle paper texture, warm ivory background and muted sage green hints, restrained blue suit. Peaceful, elegant and historically respectful, no decorative religious symbols, no text, no logos, no watermarks. Clearly an illustration, not an archival photograph.
+
+## Nature tile image
+
+Generated with the built-in image generation tool. Original: `assets/bodhi-tree.png`; optimized website image: `assets/bodhi-tree.jpg`. The 3:2 frame matches the other tiles, with English and Marathi accessible labels. This is illustrative imagery.
+
+Final generation prompt:
+
+> Use case: photorealistic-natural. Asset: landscape 3:2 image for the nature tile of a peaceful Buddhist community NGO website. A beautiful sacred fig tree (Ficus religiosa, Bodhi tree), recognizable heart-shaped leaves with long tapering drip tips, graceful light gray trunk and spreading green canopy in a quiet Indian garden. Centered tree composition with generous breathing room, full crown and base visible. Soft morning light, subtle atmospheric background, warm ivory earth and muted sage olive green foliage. Refined natural editorial photography, realistic botanical details. Peaceful, understated and harmonious, matching pale sandstone Buddha imagery. No people, no text, no logos, no watermarks. Not a depiction of a specific actual NGO location.
+
+## Jayanti section portrait
+
+The dedicated Jayanti section uses `assets/ambedkar-jayanti.jpg` (original: `assets/ambedkar-jayanti.png`), generated with the built-in image generation tool using the user-provided Festival Wishes portrait as inspiration. The community tile retains its separate portrait. The new image was visually inspected and retains its 3:2 proportions.
+
+Final generation prompt:
+
+> Use the supplied image as visual inspiration, not as an edit target. Create a new original commemorative portrait of Dr. Babasaheb Ambedkar for an NGO website's dedicated Jayanti section. Retain the reference's recognizable three-quarter pose looking gently to the right, distinctive round thin-rimmed glasses, neatly combed hair, blue suit, white shirt and tie, and dignified expression. Adapt into a refined realistic painted portrait, subtle fine-paper texture, warm ivory and pale sage background, muted navy suit, understated warm halo-like illumination behind the head. Portrait positioned slightly left of center, full head with generous breathing room, shoulders and chest visible, soft tonal foliage impressions toward the right. Landscape 3:2 frame designed to fit beside separate live webpage headings. Peaceful, elegant, respectful, restrained. No text, no dates, no quotation, no lettering, no logos, no watermark, no orange banner, no purple backdrop. This is an illustrated tribute, not an archival photograph.
+
+## Current Jayanti image — supplied image cleanup
+
+The Jayanti section now uses `assets/jai-bhim-clean.jpg`, with source output at `assets/jai-bhim-clean.png`. Edited using the built-in image generation tool from the user's attached image. The full 1712:919 image is displayed without additional cropping.
+
+Final edit prompt:
+
+> Edit the attached user image. Remove the top-right Baba Play logo and watermark, the bottom-left circular camera/search overlay, and the bottom-left OFFICIAL VIDEO banner. Reconstruct those areas naturally from the surrounding warm yellow background and foreground dancers. Remove the thin black outer frame. Preserve Dr. Babasaheb Ambedkar's exact portrait, the dancers, the existing JAI JAI BHIM lettering, the original composition, warm yellow palette, and original photographic character. Do not replace or redraw the subject into a different portrait; make only the specified cleanup. Keep the same wide landscape aspect ratio.

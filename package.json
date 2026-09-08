@@ -1,0 +1,1 @@
+{"name":"aatmiyata-kalyan","version":"1.0.0","private":true,"scripts":{"dev":"node server.mjs","start":"node server.mjs","check":"node --check i18n.js && node --check app.js && node --check server.mjs"}}

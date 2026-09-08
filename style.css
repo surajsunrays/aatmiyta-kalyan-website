@@ -1,0 +1,1222 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Libre+Caslon+Display&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500&display=swap");
+:root {
+  --paper: #fffefa;
+  --ink: #303a30;
+  --green: #657653;
+  --muted: #62675d;
+  --line: #e5e7dd;
+  --serif: "Libre Caslon Display", Georgia, serif;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #9aab7c;
+  outline-offset: 5px;
+}
+.skip {
+  position: absolute;
+  left: 20px;
+  top: -80px;
+  padding: 14px;
+  background: white;
+  z-index: 20;
+}
+.skip:focus {
+  top: 10px;
+}
+.topline {
+  height: 34px;
+  background: #edf0e7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6%;
+  font-size: 13px;
+  letter-spacing: 0.35px;
+  color: #67705e;
+}
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  gap: 25px;
+  background: var(--paper);
+}
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  white-space: nowrap;
+}
+.brand > span {
+  font-family: var(--serif);
+  font-size: 27px;
+}
+.brand small {
+  display: block;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  color: var(--muted);
+}
+nav {
+  display: flex;
+  gap: 29px;
+  font-size: 15px;
+  flex-wrap: wrap;
+}
+nav a {
+  padding: 10px 0;
+  position: relative;
+}
+nav a:hover,
+nav a.active {
+  color: var(--green);
+}
+nav a.active:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 17px;
+  background: var(--green);
+  bottom: 0;
+  left: 0;
+}
+.button {
+  display: inline-flex;
+  gap: 33px;
+  align-items: center;
+  background: var(--green);
+  color: white;
+  padding: 16px 23px;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.button:hover {
+  background: #4a5c3c;
+  transform: translateY(-2px);
+}
+.button span {
+  font-size: 18px;
+}
+.header-button {
+  padding: 11px 18px;
+  gap: 21px;
+}
+.menu-toggle {
+  display: none;
+}
+.hero {
+  /* Anchor the background at the top to keep the Buddha’s head visible. */
+  min-height: max(600px, 60.6667vw);
+  background: #e9eadf url("assets/buddha.jpg") center top / cover no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 78.82875px 8% 65px;
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 249, 242, 0.42),
+    transparent 65%
+  );
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.tiny-line {
+  height: 1px;
+  width: 25px;
+  background: var(--green);
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1 {
+  font-family: var(--serif);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -1.8px;
+  margin: 24px 0;
+}
+em {
+  font-weight: 400;
+  color: var(--green);
+}
+h1 em {
+  font-style: normal;
+}
+p {
+  line-height: 1.85;
+  color: var(--muted);
+}
+.hero p {
+  font-size: 16px;
+  color: #626a5e;
+  line-height: 1.9;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 29px;
+}
+.text-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+.play {
+  border: 1px solid #aab09d;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+}
+.hero-foot {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 41px;
+  color: #636e57;
+  font-size: 15px;
+}
+.hero-foot small {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+  color: #808575;
+}
+.small-lotus {
+  font-size: 31px;
+}
+.image-caption {
+  position: absolute;
+  right: 6%;
+  bottom: 25px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: #faffef;
+  text-shadow: 0 1px 6px #34422e;
+}
+.values-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 26px 8%;
+  border-bottom: 1px solid var(--line);
+  background: #f7f8f1;
+}
+.values-strip > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 14px;
+  border-right: 1px solid #dfe3d5;
+}
+.values-strip > span:last-child {
+  border: 0;
+}
+.values-strip i {
+  font-size: 24px;
+  font-style: normal;
+  color: #869372;
+}
+.section {
+  padding: 80px 8%;
+}
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  border-bottom: 1px solid var(--line);
+}
+h2 {
+  font-family: var(--serif);
+  font-size: 43px;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.65px;
+  margin: 16px 0 20px;
+}
+h2 em {
+  font-style: normal;
+}
+.about-copy {
+  padding-top: 10px;
+}
+.about-copy p {
+  font-size: 16px;
+  margin-bottom: 17px;
+}
+.underlink {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 14px;
+  color: var(--green);
+  font-weight: 600;
+  padding: 7px 0;
+  border: 0;
+  border-bottom: 1px solid #c0c9b4;
+  background: none;
+}
+.underlink span {
+  font-size: 18px;
+}
+.underlink:hover {
+  color: #293b20;
+  border-color: #293b20;
+}
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+.section-heading h2 {
+  margin-bottom: 0;
+}
+.section-heading > p {
+  font-size: 15px;
+  margin: 0;
+}
+.work {
+  background: #fafaf6;
+}
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.work-card {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  overflow: hidden;
+  background: var(--paper);
+}
+.card-art {
+  height: 205px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.dhamma-art {
+  height: auto;
+  aspect-ratio: 3 / 2;
+  background: #e9eadf url("assets/dhamma-buddha.jpg") center / cover no-repeat;
+}
+.dhamma-art .art-symbol {
+  display: none;
+}
+.art-tag {
+  position: absolute;
+  bottom: 13px;
+  left: 18px;
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  background: #fffff0de;
+  padding: 7px 10px;
+  border-radius: 2px;
+}
+.celebration-art {
+  height: auto;
+  aspect-ratio: 3 / 2;
+  background: #ece5d8 url("assets/ambedkar.jpg") center / cover no-repeat;
+}
+.art-symbol {
+  font-size: 125px;
+  color: #a98e60;
+  position: relative;
+}
+.rings {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border: 1px solid #d8c8a9;
+  border-radius: 50%;
+}
+.rings:before,
+.rings:after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid #d8c8a9;
+  border-radius: 50%;
+}
+.rings:after {
+  inset: 40px;
+}
+.nursery-art {
+  height: auto;
+  aspect-ratio: 3 / 2;
+  background: #e3e8d6 url("assets/bodhi-tree.jpg") center / cover no-repeat;
+}
+.card-body {
+  padding: 25px 23px;
+}
+.card-body h3 {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.card-body p {
+  font-size: 15px;
+  min-height: 68px;
+}
+.card-body .underlink {
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 18px;
+}
+.events {
+  background: var(--paper);
+}
+.pill {
+  border: 1px solid var(--line);
+  border-radius: 25px;
+  padding: 10px 14px;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  white-space: normal;
+}
+.event {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: none;
+  padding: 23px 0;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.event:hover {
+  background: #f7f8f1;
+}
+.event-date {
+  width: 76px;
+  min-width: 76px;
+  height: 66px;
+  background: #f1f3eb;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--green);
+}
+.event-date strong {
+  font-family: var(--serif);
+  font-size: 31px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+.event-name h3 {
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0 0 5px;
+}
+.event-name p {
+  font-size: 14px;
+  margin: 0;
+}
+.event-type {
+  font-size: 13px;
+  margin-left: auto;
+  color: #858878;
+}
+.event-arrow {
+  font-size: 24px;
+  margin-left: auto;
+  padding: 10px;
+}
+.event-type + .event-arrow {
+  margin-left: 20px;
+}
+.lunar {
+  font-size: 30px;
+}
+.lunar small {
+  font-size: 10px;
+}
+.events-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  gap: 20px;
+}
+.events-bottom p {
+  font-size: 13px;
+  margin: 0;
+}
+.invitation {
+  position: relative;
+  text-align: center;
+  background: #edf0e5;
+  overflow: hidden;
+}
+.invitation .eyebrow {
+  justify-content: center;
+}
+.invitation h2 {
+  font-size: 51px;
+}
+.invitation p {
+  font-size: 16px;
+}
+.invitation .button {
+  margin-top: 10px;
+}
+.invitation-flower {
+  position: absolute;
+  right: -65px;
+  bottom: -130px;
+  font-size: 480px;
+  line-height: 1;
+  color: #dfe5d4;
+  pointer-events: none;
+}
+.invitation > *:not(.invitation-flower) {
+  position: relative;
+}
+.visit {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 70px;
+}
+.visit h2 {
+  font-size: 40px;
+}
+.visit p {
+  font-size: 16px;
+}
+.visit .visit-note {
+  font-size: 15px;
+}
+.visit-panel {
+  background: #f5f5ec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e8d9;
+  border-radius: 50% 50% 5px 5px;
+  min-height: 270px;
+}
+.visit-panel > span {
+  font-size: 49px;
+  color: #a4ae8e;
+}
+.visit-panel p {
+  font-family: var(--serif);
+  font-size: 28px;
+  text-align: center;
+  line-height: 1.3;
+  margin: 15px 0;
+  color: #68765a;
+}
+.visit-panel small {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--green);
+}
+footer {
+  padding: 30px 6%;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+footer .brand > span {
+  font-size: 23px;
+}
+footer .brand small {
+  font-size: 10px;
+}
+footer p,
+footer > span {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+dialog {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  max-width: 540px;
+  width: calc(100% - 32px);
+  padding: 45px;
+  background: var(--paper);
+  color: var(--ink);
+}
+dialog::backdrop {
+  background: #23301f80;
+  backdrop-filter: blur(4px);
+}
+dialog h2 {
+  font-size: 37px;
+}
+dialog p {
+  font-size: 16px;
+}
+.close-dialog {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: 0;
+  background: none;
+  font-size: 28px;
+}
+.dialog-note {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+body.modal-open {
+  overflow: hidden;
+}
+@media (min-width: 1500px) {
+  header,
+  .topline,
+  footer {
+    padding-left: calc((100vw - 1320px) / 2);
+    padding-right: calc((100vw - 1320px) / 2);
+  }
+  .section,
+  .hero {
+    padding-left: calc((100vw - 1260px) / 2);
+    padding-right: calc((100vw - 1260px) / 2);
+  }
+  .hero {
+    min-height: 720px;
+  }
+}
+@media (max-width: 1050px) {
+  header {
+    padding: 0 4%;
+    gap: 18px;
+  }
+  nav {
+    gap: 17px;
+  }
+  .brand > span {
+    font-size: 23px;
+  }
+  .header-button {
+    gap: 12px;
+  }
+  .hero {
+    padding-left: 6%;
+    min-height: 580px;
+  }
+  h1 {
+    font-size: 56px;
+  }
+  .section {
+    padding: 65px 6%;
+  }
+  .about {
+    gap: 40px;
+  }
+  h2 {
+    font-size: 37px;
+  }
+  .card-body {
+    padding: 20px 17px;
+  }
+  .card-body h3 {
+    font-size: 23px;
+  }
+  .event-type {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .topline {
+    justify-content: center;
+    height: 29px;
+  }
+  .location {
+    display: none;
+  }
+  header {
+    height: 83px;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 0 5%;
+  }
+  .brand > span {
+    font-size: 24px;
+  }
+  .brand img {
+    width: 39px;
+  }
+  .brand small {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+  .header-button {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+    border: 1px solid var(--line);
+    background: none;
+    border-radius: 4px;
+    font-size: 21px;
+    padding: 5px 10px;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    top: 83px;
+    left: 0;
+    right: 0;
+    background: var(--paper);
+    z-index: 5;
+    padding: 22px 7%;
+    box-shadow: 0 10px 12px #2638200d;
+  }
+  nav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  nav a.active:after {
+    display: none;
+  }
+  .hero {
+    min-height: 680px;
+    align-items: flex-start;
+    padding: 55.7865px 7% 170px;
+    background-position: 64% top;
+  }
+  .hero:before {
+    background: linear-gradient(90deg, #f6f6ebed, #f6f6eba6 55%, #f6f6eb1a);
+  }
+  h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+  .hero p {
+    font-size: 15px;
+  }
+  .hero-foot {
+    margin-top: 28px;
+  }
+  .hero-actions {
+    gap: 20px;
+  }
+  .hero .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+  .image-caption {
+    font-size: 16px;
+    right: 7%;
+    bottom: 22px;
+  }
+  .values-strip {
+    grid-template-columns: 1fr 1fr;
+    padding: 15px 4%;
+    gap: 16px 0;
+  }
+  .values-strip > span {
+    font-size: 13px;
+    gap: 8px;
+  }
+  .values-strip > span:nth-child(2) {
+    border: 0;
+  }
+  .values-strip i {
+    font-size: 21px;
+  }
+  .section {
+    padding: 51px 7%;
+  }
+  .about {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .about-copy {
+    padding: 0;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .section-heading > p {
+    display: none;
+  }
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .card-art {
+    height: 210px;
+  }
+  .dhamma-art,
+  .celebration-art,
+  .nursery-art {
+    height: auto;
+  }
+  .card-body {
+    padding: 23px;
+  }
+  .card-body h3 {
+    font-size: 27px;
+  }
+  .card-body p {
+    min-height: 0;
+    font-size: 16px;
+  }
+  .event {
+    gap: 15px;
+    padding: 19px 0;
+  }
+  .event-name h3 {
+    font-size: 23px;
+  }
+  .event-name p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .event-date {
+    width: 68px;
+    min-width: 68px;
+  }
+  .event-arrow {
+    padding: 0;
+    font-size: 20px;
+  }
+  .events-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .invitation h2 {
+    font-size: 43px;
+  }
+  .invitation-flower {
+    font-size: 330px;
+    right: -125px;
+    bottom: -70px;
+  }
+  .visit {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .visit h2 {
+    font-size: 36px;
+  }
+  .visit-panel {
+    min-height: 270px;
+  }
+  .desktop {
+    display: none;
+  }
+  footer {
+    padding: 30px 7%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  dialog {
+    padding: 37px 25px;
+  }
+  .eyebrow {
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *:before,
+  *:after {
+    transition: none !important;
+  }
+}
+
+/* The language control remains visible beside the mobile menu. */
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 9px 11px;
+  font-size: 15px;
+  color: var(--muted);
+  order: 2;
+}
+.language-toggle .selected {
+  color: var(--green);
+  font-weight: 700;
+}
+.language-toggle:hover {
+  background: #edf0e7;
+}
+.header-button {
+  order: 3;
+}
+.menu-toggle {
+  order: 4;
+}
+html[lang="mr"] body {
+  font-family:
+    "Noto Sans Devanagari", "Nirmala UI", "Kohinoor Devanagari", sans-serif;
+}
+html[lang="mr"] h1,
+html[lang="mr"] h2,
+html[lang="mr"] h3,
+html[lang="mr"] .brand > span,
+html[lang="mr"] .visit-panel p {
+  font-family:
+    "Noto Serif Devanagari", "Kohinoor Devanagari", "Nirmala UI", serif;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+html[lang="mr"] .eyebrow,
+html[lang="mr"] .brand small,
+html[lang="mr"] .art-tag,
+html[lang="mr"] .pill {
+  letter-spacing: 0.3px;
+}
+html[lang="mr"] h1 {
+  font-size: 56px;
+}
+html[lang="mr"] h2 {
+  font-size: 36px;
+}
+html[lang="mr"] .brand > span {
+  font-size: 24px;
+}
+html[lang="mr"] .brand small {
+  font-family: inherit;
+}
+html[lang="mr"] .event-date {
+  height: auto;
+  min-height: 66px;
+}
+html[lang="mr"] .card-body h3 {
+  font-size: 24px;
+}
+html[lang="mr"] .event-name h3 {
+  font-size: 22px;
+}
+@media (min-width: 761px) and (max-width: 1200px) {
+  header {
+    gap: 14px;
+  }
+  nav {
+    gap: 14px;
+  }
+  .header-button {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  header {
+    gap: 10px;
+  }
+  .language-toggle {
+    margin-left: auto;
+    padding: 7px 8px;
+    gap: 5px;
+    font-size: 14px;
+  }
+  .brand {
+    gap: 6px;
+  }
+  .brand > span {
+    font-size: 21px;
+  }
+  .brand small {
+    font-size: 8px;
+  }
+  .brand img {
+    width: 33px;
+  }
+  html[lang="mr"] h1 {
+    font-size: 42px;
+  }
+  html[lang="mr"] h2 {
+    font-size: 31px;
+  }
+  html[lang="mr"] .brand > span {
+    font-size: 21px;
+  }
+  html[lang="mr"] .hero {
+    min-height: 710px;
+  }
+  html[lang="mr"] .hero p {
+    max-width: 290px;
+  }
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+  html[lang="mr"] .event-name h3 {
+    font-size: 19px;
+  }
+  .visit > * {
+    min-width: 0;
+  }
+}
+@media (max-width: 370px) {
+  header {
+    padding: 0 3%;
+    gap: 6px;
+  }
+  .brand img {
+    width: 27px;
+  }
+  .brand > span,
+  html[lang="mr"] .brand > span {
+    font-size: 18px;
+  }
+  .brand small {
+    letter-spacing: 0.7px;
+  }
+  .menu-toggle {
+    padding: 4px 7px;
+  }
+}
+
+/* Keep larger text comfortable in both languages and at narrow widths. */
+.hero-content {
+  max-width: 650px;
+}
+.hero p .desktop {
+  display: none;
+}
+.hero p {
+  max-width: 510px;
+}
+.event-name {
+  min-width: 0;
+}
+.event-type {
+  flex-shrink: 0;
+}
+.events-bottom {
+  flex-wrap: wrap;
+}
+header .brand small {
+  letter-spacing: 1px;
+}
+@media (max-width: 760px) {
+  header .brand small {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+  .hero p {
+    max-width: 340px;
+  }
+  .values-strip > span {
+    text-align: center;
+  }
+  .hero .eyebrow {
+    line-height: 1.7;
+  }
+}
+
+/* Ambedkar Jayanti: reflection and practical ways to live the message. */
+.jayanti {
+  background: #f1f3ed;
+  border-top: 1px solid var(--line);
+}
+.jayanti-intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 50px;
+  align-items: center;
+}
+.jayanti-portrait {
+  aspect-ratio: 1712 / 919;
+  background: #efe0ab url("assets/jai-bhim-clean.jpg") center / contain
+    no-repeat;
+  border-radius: 7px;
+}
+.jayanti-copy {
+  min-width: 0;
+}
+.jayanti-copy h2 {
+  font-size: 42px;
+}
+.jayanti-motto {
+  font-family: var(--serif);
+  color: #425d72;
+  font-size: 32px;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+.jayanti-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 45px;
+  scroll-margin-top: 30px;
+}
+.jayanti-values article {
+  border-top: 2px solid #aebcaf;
+  padding-top: 24px;
+}
+.jayanti h3 {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 12px 0;
+}
+.jayanti-practice {
+  border-left: 2px solid #c8d2c3;
+  padding-left: 16px;
+  font-size: 15px;
+  color: #4c6045;
+}
+.jayanti-invitation {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  justify-content: space-between;
+  border-top: 1px solid #d6ddd0;
+  margin-top: 35px;
+  padding-top: 25px;
+}
+.jayanti-invitation > div {
+  max-width: 720px;
+}
+.jayanti-invitation .button {
+  flex-shrink: 0;
+}
+html[lang="mr"] .jayanti-motto {
+  font-family: "Noto Serif Devanagari", "Kohinoor Devanagari", serif;
+  font-size: 29px;
+  line-height: 1.7;
+}
+@media (max-width: 1050px) {
+  .jayanti-intro {
+    gap: 30px;
+  }
+  .jayanti-copy h2 {
+    font-size: 36px;
+  }
+  .jayanti-values {
+    gap: 22px;
+  }
+  .jayanti-invitation {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+@media (max-width: 760px) {
+  .jayanti-intro,
+  .jayanti-values {
+    grid-template-columns: 1fr;
+  }
+  .jayanti-copy h2 {
+    font-size: 34px;
+  }
+  .jayanti-motto,
+  html[lang="mr"] .jayanti-motto {
+    font-size: 27px;
+  }
+  .jayanti-values {
+    margin-top: 32px;
+  }
+}
+
+/* External course schedule, available from the page content. */
+.courses { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; background: #fafaf6; border-bottom: 1px solid var(--line); }
+.courses-intro, .course-card > div { min-width: 0; }
+.course-card { display: flex; align-items: flex-start; gap: 20px; padding: 30px; background: var(--paper); border: 1px solid var(--line); border-radius: 7px; }
+.course-symbol { color: var(--green); font-size: 36px; line-height: 1.3; }
+.course-card h3 { font-family: var(--serif); font-size: 30px; font-weight: 400; margin-bottom: 8px; }
+.course-card .course-location { font-size: 14px; color: var(--green); }
+.course-card .course-note { font-size: 13px; margin: 16px 0 0; }
+@media (max-width: 1050px) {
+  .courses { gap: 30px; }
+  .course-card { padding: 24px; gap: 14px; }
+}
+@media (max-width: 760px) {
+  .courses { grid-template-columns: 1fr; gap: 20px; }
+  .course-card { flex-direction: column; }
+  .course-card .button { gap: 18px; }
+}
