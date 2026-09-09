@@ -1204,19 +1204,64 @@ html[lang="mr"] .jayanti-motto {
 }
 
 /* External course schedule, available from the page content. */
-.courses { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; background: #fafaf6; border-bottom: 1px solid var(--line); }
-.courses-intro, .course-card > div { min-width: 0; }
-.course-card { display: flex; align-items: flex-start; gap: 20px; padding: 30px; background: var(--paper); border: 1px solid var(--line); border-radius: 7px; }
-.course-symbol { color: var(--green); font-size: 36px; line-height: 1.3; }
-.course-card h3 { font-family: var(--serif); font-size: 30px; font-weight: 400; margin-bottom: 8px; }
-.course-card .course-location { font-size: 14px; color: var(--green); }
-.course-card .course-note { font-size: 13px; margin: 16px 0 0; }
+.courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+  background: #fafaf6;
+  border-bottom: 1px solid var(--line);
+}
+.courses-intro,
+.course-card > div {
+  min-width: 0;
+}
+.course-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+.course-symbol {
+  color: var(--green);
+  font-size: 36px;
+  line-height: 1.3;
+}
+.course-card h3 {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.course-card .course-location {
+  font-size: 14px;
+  color: var(--green);
+}
+.course-card .course-note {
+  font-size: 13px;
+  margin: 16px 0 0;
+}
 @media (max-width: 1050px) {
-  .courses { gap: 30px; }
-  .course-card { padding: 24px; gap: 14px; }
+  .courses {
+    gap: 30px;
+  }
+  .course-card {
+    padding: 24px;
+    gap: 14px;
+  }
 }
 @media (max-width: 760px) {
-  .courses { grid-template-columns: 1fr; gap: 20px; }
-  .course-card { flex-direction: column; }
-  .course-card .button { gap: 18px; }
+  .courses {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .course-card {
+    flex-direction: column;
+  }
+  .course-card .button {
+    gap: 18px;
+  }
 }
