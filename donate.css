@@ -1,0 +1,221 @@
+[hidden] {
+  display: none !important;
+}
+.donation-heading {
+  text-align: center;
+  background: #edf0e5;
+  padding-top: 55px;
+  padding-bottom: 50px;
+}
+.donation-heading .eyebrow {
+  justify-content: center;
+}
+.donation-heading h1 {
+  font-size: clamp(40px, 5vw, 60px);
+}
+.donation-heading > p {
+  max-width: 620px;
+  margin: 0 auto;
+}
+.donation-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 65px;
+  align-items: start;
+}
+.donation-story {
+  padding-top: 20px;
+}
+.donation-story ul {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+.donation-story li {
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.donation-story li strong,
+.donation-story li span {
+  display: block;
+}
+.donation-story li span {
+  color: var(--muted);
+  margin-top: 8px;
+  line-height: 1.7;
+}
+.donation-panel {
+  min-width: 0;
+  padding: 35px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fffefa;
+  box-shadow: 0 12px 45px #33452208;
+}
+.donation-panel h2 {
+  font-size: 34px;
+}
+.donation-steps {
+  display: flex;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+.donation-steps [aria-current] {
+  color: var(--green);
+  font-weight: 700;
+}
+.donation-notice {
+  border: 1px solid #dfd4ad;
+  background: #faf6e8;
+  color: #675b31;
+  padding: 15px;
+  border-radius: 9px;
+  font-size: 14px;
+}
+.donation-fields {
+  display: grid;
+  gap: 10px;
+}
+.donation-fields label {
+  margin-top: 10px;
+  font-weight: 500;
+}
+.donation-fields input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #b9c1af;
+  background: #fff;
+  border-radius: 8px;
+  padding: 13px;
+  font: inherit;
+  color: var(--ink);
+}
+.donation-fields input:focus-visible {
+  outline: 3px solid #9aab7c;
+  outline-offset: 2px;
+}
+.donation-fields input[aria-invalid="true"] {
+  border-color: #a23f31;
+}
+.amount-field {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.amount-field > span {
+  position: absolute;
+  left: 15px;
+}
+.amount-field input {
+  padding-left: 35px;
+}
+.field-help {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.amount-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.amount-options button {
+  border: 1px solid #b9c1af;
+  border-radius: 999px;
+  background: transparent;
+  padding: 10px 17px;
+}
+.amount-options button[aria-pressed="true"],
+.amount-options button:hover {
+  background: #edf0e5;
+  border-color: var(--green);
+}
+.form-error {
+  color: #9d3728;
+  font-size: 15px;
+}
+.payment-amount {
+  font-size: 38px;
+  color: var(--green);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.qr-frame {
+  width: min(100%, 290px);
+  margin: 20px auto 12px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+#qr-code svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.qr-status {
+  text-align: center;
+  font-weight: 600;
+  color: #675b31;
+  font-size: 14px;
+}
+.donation-summary {
+  margin: 25px 0;
+}
+.donation-summary > div {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.donation-summary dt {
+  color: var(--muted);
+}
+.donation-summary dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.secondary-button {
+  background: transparent;
+  color: var(--green);
+  margin-top: 16px;
+}
+.secondary-button:hover {
+  background: #edf0e5;
+}
+@media (max-width: 850px) {
+  .donation-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .donation-story {
+    padding-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  .donation-panel {
+    padding: 22px 18px;
+  }
+  .donation-layout {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .donation-summary > div {
+    grid-template-columns: 85px 1fr;
+    font-size: 14px;
+  }
+  .donation-steps {
+    gap: 10px;
+    font-size: 13px;
+  }
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}

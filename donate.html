@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f8f8f3" />
+    <meta
+      name="description"
+      content="Help care for our Buddha Vihar, bring our community together, and nurture a greener tomorrow with Aatmiyata Kalyan."
+    />
+    <title>Donate — Aatmiyata Kalyan</title>
+    <link rel="icon" href="assets/lotus.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="donate.css" />
+    <script src="assets/qrcode-generator.js" defer></script>
+    <script src="i18n.js" defer></script>
+    <script type="module" src="donate.mjs"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="topline">
+      <span>Rooted in compassion. Growing together.</span
+      ><span class="location">⌖ Chinchkhed Khurd, Akot, Maharashtra</span>
+    </div>
+    <header>
+      <a class="brand" href="index.html#home" aria-label="Aatmiyata Kalyan home"
+        ><img src="assets/lotus.svg" alt="" width="47" height="47" /><span
+          >Aatmiyata Kalyan<small>PEACE · COMPASSION · COMMUNITY</small></span
+        ></a
+      ><button
+        id="language-toggle"
+        class="language-toggle"
+        type="button"
+        aria-label="मराठीत वाचा"
+        aria-pressed="false"
+      >
+        <span lang="en" class="selected">EN</span
+        ><span aria-hidden="true">/</span><span lang="mr">मराठी</span></button
+      ><button
+        class="menu-toggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navigation"
+      >
+        ☰
+      </button>
+      <nav id="navigation" aria-label="Main navigation">
+        <a href="index.html#home">Home</a><a href="index.html#about">About us</a
+        ><a href="index.html#work">Our work</a
+        ><a href="index.html#events">Celebrations</a
+        ><a href="index.html#visit">Visit us</a>
+      </nav>
+      <a class="button header-button" href="donate.html" aria-current="page"
+        >Donate <span>→</span></a
+      >
+    </header>
+
+    <main id="main">
+      <section class="donation-heading section">
+        <div class="eyebrow">A GIFT OF KINDNESS</div>
+        <h1>Your kindness.<br /><em>Our community’s strength.</em></h1>
+        <p>
+          A place to gather. A tradition to celebrate. A sapling to nurture.
+          Your contribution helps us care for the things that bring our
+          community together.
+        </p>
+      </section>
+      <section class="donation-layout section" aria-label="Donation details">
+        <aside class="donation-story">
+          <img src="assets/lotus.svg" width="65" height="65" alt="" />
+          <h2>Give with kindness.<br /><em>Grow together.</em></h2>
+          <p>
+            At Aatmiyata Kalyan, service begins close to home — at our Buddha
+            Vihar in Chinchkhed Khurd. Your generosity can help carry this
+            shared work forward, one thoughtful act at a time.
+          </p>
+          <ul>
+            <li>
+              <strong>Keep a place of peace welcoming</strong
+              ><span
+                >Help care for our Buddha Vihar, where neighbours come together
+                to reflect, connect, and find a sense of belonging.</span
+              >
+            </li>
+            <li>
+              <strong>Bring our community closer</strong
+              ><span
+                >Support celebrations that honour our guiding lights and keep
+                the values of equality, education, and compassion alive.</span
+              >
+            </li>
+            <li>
+              <strong>Let a greener tomorrow take root</strong
+              ><span
+                >Help nurture our plant nursery, where patient, everyday care
+                gives new life a chance to grow.</span
+              >
+            </li>
+          </ul>
+          <p>
+            Whatever you choose to give, thank you for making room for others in
+            your generosity.
+          </p>
+          <a class="underlink" href="index.html#visit"
+            >We’d love to meet you at the Vihar <span>→</span></a
+          >
+        </aside>
+        <div class="donation-panel">
+          <div class="donation-steps">
+            <span id="step-one" aria-current="step">1 · Your details</span
+            ><span aria-hidden="true">→</span
+            ><span id="step-two">2 · Payment QR</span>
+          </div>
+          <p class="donation-notice" id="demo-notice">
+            Online donations are coming soon. You can explore the steps below,
+            but the sample QR will not send any money.
+          </p>
+          <form id="donation-form" novalidate>
+            <h2>Choose your contribution</h2>
+            <p>
+              Give an amount that feels right for you. Start with your name and
+              chosen amount; we’ll prepare a QR for you to review.
+            </p>
+            <div class="donation-fields">
+              <label for="donor-name">Full name *</label
+              ><input
+                id="donor-name"
+                name="name"
+                autocomplete="name"
+                required
+                minlength="2"
+                maxlength="80"
+                aria-describedby="form-error"
+              />
+              <label for="donor-email">Email (optional)</label
+              ><input
+                id="donor-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                maxlength="120"
+                aria-describedby="form-error"
+              />
+              <label for="donor-city">City / village (optional)</label
+              ><input
+                id="donor-city"
+                name="city"
+                autocomplete="address-level2"
+                maxlength="80"
+                aria-describedby="form-error"
+              />
+              <label for="donation-amount">Donation amount (INR) *</label>
+              <div class="amount-field">
+                <span aria-hidden="true">₹</span
+                ><input
+                  id="donation-amount"
+                  name="amount"
+                  type="text"
+                  inputmode="decimal"
+                  required
+                  maxlength="9"
+                  aria-describedby="amount-help form-error"
+                />
+              </div>
+              <p class="field-help" id="amount-help">
+                Enter ₹1 to ₹1,00,000, with up to two decimal places.
+              </p>
+              <div class="amount-options" aria-label="Suggested amounts">
+                <button type="button" data-amount="100" aria-pressed="false">
+                  ₹100</button
+                ><button type="button" data-amount="500" aria-pressed="false">
+                  ₹500</button
+                ><button type="button" data-amount="1000" aria-pressed="false">
+                  ₹1,000</button
+                ><button type="button" data-amount="2500" aria-pressed="false">
+                  ₹2,500
+                </button>
+              </div>
+            </div>
+            <p class="field-help">
+              Your details stay in this tab and are not sent to us or saved by
+              this site. This form does not issue a donation receipt.
+            </p>
+            <p id="form-error" class="form-error" role="alert" hidden></p>
+            <button
+              class="button"
+              type="submit"
+              id="continue-donation"
+              disabled
+            >
+              Review my QR <span aria-hidden="true">→</span>
+            </button>
+          </form>
+          <section id="payment-step" hidden aria-labelledby="payment-title">
+            <h2 id="payment-title" tabindex="-1">
+              Your contribution, at a glance
+            </h2>
+            <p class="payment-amount" id="payment-amount"></p>
+            <p id="payment-instructions"></p>
+            <div class="qr-frame"><div id="qr-code" role="img"></div></div>
+            <p class="qr-status" id="qr-status"></p>
+            <dl class="donation-summary">
+              <div>
+                <dt>Donor</dt>
+                <dd id="summary-name"></dd>
+              </div>
+              <div>
+                <dt>Recipient</dt>
+                <dd id="summary-recipient"></dd>
+              </div>
+              <div id="upi-row" hidden>
+                <dt>UPI ID</dt>
+                <dd id="summary-upi"></dd>
+              </div>
+              <div>
+                <dt>Reference</dt>
+                <dd id="summary-reference"></dd>
+              </div>
+            </dl>
+            <a id="open-upi" class="button" hidden
+              >Open UPI app <span aria-hidden="true">→</span></a
+            >
+            <p class="field-help" id="verification-note" hidden>
+              This page cannot verify payment or issue a receipt. Check the
+              recipient and amount in your UPI app before paying, and keep the
+              app’s transaction confirmation.
+            </p>
+            <button
+              class="button secondary-button"
+              type="button"
+              id="edit-donation"
+            >
+              Edit details or amount
+            </button>
+          </section>
+          <noscript
+            ><p>
+              JavaScript is needed to generate a QR code. Please enable it or
+              contact the team at the Vihar.
+            </p></noscript
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="index.html"
+        ><img src="assets/lotus.svg" width="42" height="42" alt="" /><span
+          >Aatmiyata Kalyan<small>PEACE · COMPASSION · COMMUNITY</small></span
+        ></a
+      ><a class="underlink" href="index.html">Back to home <span>→</span></a
+      ><span>© <span id="year">2026</span> Aatmiyata Kalyan</span>
+    </footer>
+  </body>
+</html>

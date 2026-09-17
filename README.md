@@ -14,7 +14,7 @@ Open http://localhost:5173. Set `PORT` to change the port. Run `npm run check` t
 
 ## Content
 
-Edit page content in `index.html` and celebration detail text in `app.js`. Observance dates are not announced event schedules. The map links to the village rather than claiming an exact Vihar pin. Add verified contact details, programme timings, real activity photographs, and donation information when available. No payments or personal data are collected. The hero image is illustrative AI-generated imagery, not a photograph of the NGO's actual Vihar.
+Edit page content in `index.html` and celebration detail text in `app.js`. Observance dates are not announced event schedules. The map links to the village rather than claiming an exact Vihar pin. Add verified contact details, programme timings, real activity photographs, and donation information when available. The home page does not collect personal data. The donation page previews donor details locally; see Donation page below. The hero image is illustrative AI-generated imagery, not a photograph of the NGO's actual Vihar.
 
 ## Image asset
 
@@ -71,3 +71,21 @@ The Jayanti section now uses `assets/jai-bhim-clean.jpg`, with source output at 
 Final edit prompt:
 
 > Edit the attached user image. Remove the top-right Baba Play logo and watermark, the bottom-left circular camera/search overlay, and the bottom-left OFFICIAL VIDEO banner. Reconstruct those areas naturally from the surrounding warm yellow background and foreground dancers. Remove the thin black outer frame. Preserve Dr. Babasaheb Ambedkar's exact portrait, the dancers, the existing JAI JAI BHIM lettering, the original composition, warm yellow palette, and original photographic character. Do not replace or redraw the subject into a different portrait; make only the specified cleanup. Keep the same wide landscape aspect ratio.
+
+## Donation page
+
+Open `/donate.html` using `npm run dev`. The home page links to it from the header and involvement section. The page supports English and Marathi, validates name and amount (₹1–₹1,00,000, at most two decimal places), and accepts optional email/city. Only after submission does it generate a QR with the selected amount. Editing invalidates the previous QR.
+
+### Demo and live setup
+
+`donation-config.mjs` ships with `enabled: false` and an empty UPI ID. Sample QRs encode **plain demo text with the selected INR amount**, never a payment URI. They cannot initiate payment.
+
+To enable real UPI requests later, set `upiId` to the NGO's bank-verified UPI address, confirm `payeeName`, then set `enabled: true`. Do not paste a static QR image: QRs are generated for each entered amount. The generated `upi://pay` URI includes `pa`, `pn`, `am`, `cu=INR`, a unique `tr`, and a generic donation note. Test the configured recipient and amount with the NGO's bank/payment provider before launch; syntactic validation cannot verify account ownership or app acceptance. See [Google's UPI field documentation](https://developers.google.com/pay/india/api/web/create-payment-method).
+
+The QR uses the requested amount; a payment app may allow the donor to change it. This static site cannot enforce or verify the amount ultimately paid. It does not claim payment success, issue receipts, or promise tax benefits. Payment verification and donation records require a backend/payment provider integration.
+
+Donor name/email/city remain in memory and form fields in this tab; they are not sent to a server, stored in localStorage, or included in the QR. Browser autofill may retain fields according to the visitor's own browser settings. Only the language preference is stored by the site.
+
+QR encoding runs locally with vendored `qrcode-generator` 1.4.4 (`assets/qrcode-generator.js`, MIT license notice retained). No donor information is sent to a third-party QR service.
+
+Run `npm run check` and `npm test`. Tests cover invalid amounts, decimal precision, donor validation, safe demo mode, live URI fields, and missing configuration. Browser visual QA was unavailable in this session.
