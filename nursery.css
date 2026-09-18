@@ -1,0 +1,116 @@
+.nursery-intro {
+  text-align: center;
+  background: #f1f3eb;
+}
+.nursery-intro > .underlink {
+  margin-bottom: 28px;
+}
+.nursery-intro .eyebrow {
+  justify-content: center;
+}
+.nursery-intro h1 {
+  font-size: clamp(42px, 5vw, 68px);
+}
+.nursery-intro p {
+  max-width: 640px;
+  margin: 0 auto 26px;
+  line-height: 1.8;
+}
+.nursery-banner {
+  max-width: 1080px;
+  margin: 42px auto 0;
+  padding: 0 24px;
+}
+.nursery-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.nursery-banner figcaption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  padding-top: 14px;
+}
+.nursery-gallery {
+  max-width: 1500px;
+  margin: auto;
+}
+.nursery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 28px;
+}
+.nursery-photo {
+  position: relative;
+  margin: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.nursery-photo:hover,
+.nursery-photo:focus-within {
+  transform: scale(1.1);
+  z-index: 1;
+}
+.nursery-photo > a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.nursery-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.nursery-photo a:hover img,
+.nursery-photo a:focus-visible img {
+  transform: scale(1.1);
+}
+.photo-open {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  border-radius: 50%;
+  padding: 8px 14px;
+  background: var(--paper);
+  font-size: 24px;
+}
+.nursery-photo a:hover .photo-open {
+  background: #edf0e7;
+}
+#photo-dialog {
+  max-width: 1200px;
+  padding: 48px 16px 16px;
+}
+#photo-dialog img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+}
+.nursery-intro + .nursery-banner ~ .invitation p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 761px) and (max-width: 1050px) {
+  .nursery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 760px) {
+  .nursery-grid {
+    grid-template-columns: 1fr;
+  }
+  .nursery-banner {
+    padding: 0 16px;
+    margin-top: 24px;
+  }
+}
