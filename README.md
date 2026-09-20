@@ -18,7 +18,7 @@ Edit page content in `index.html` and celebration detail text in `app.js`. Obser
 
 ## Image asset
 
-Generated using the built-in image generation tool. Original: `assets/buddha.png`. Optimized website version: `assets/buddha.jpg`.
+Generated using the built-in image generation tool. Optimized website version: `assets/buddha.jpg`.
 
 Final generation prompt:
 
@@ -34,7 +34,7 @@ Use the EN / मराठी header toggle to switch between English and Marathi
 
 ## Dhamma card image
 
-Generated with the built-in image generation tool. Saved original: `assets/dhamma-buddha.png`; optimized site asset: `assets/dhamma-buddha.jpg`. The card preserves the image’s 3:2 ratio to show the complete statue on desktop and mobile. This is illustrative imagery.
+Generated with the built-in image generation tool. Optimized site asset: `assets/dhamma-buddha.jpg`. The card preserves the image’s 3:2 ratio to show the complete statue on desktop and mobile. This is illustrative imagery.
 
 Final generation prompt:
 
@@ -42,7 +42,7 @@ Final generation prompt:
 
 ## Community tile portrait
 
-Built-in image generation produced the illustrated Dr. Babasaheb Ambedkar portrait. Original: `assets/ambedkar.png`. Optimized site image: `assets/ambedkar.jpg`. Uses a 3:2 frame and an English/Marathi accessible label.
+Built-in image generation produced the illustrated Dr. Babasaheb Ambedkar portrait. Optimized site image: `assets/ambedkar.jpg`. Uses a 3:2 frame and an English/Marathi accessible label.
 
 Final generation prompt:
 
@@ -50,23 +50,15 @@ Final generation prompt:
 
 ## Nature tile image
 
-Generated with the built-in image generation tool. Original: `assets/bodhi-tree.png`; optimized website image: `assets/bodhi-tree.jpg`. The 3:2 frame matches the other tiles, with English and Marathi accessible labels. This is illustrative imagery.
+Generated with the built-in image generation tool. Optimized website image: `assets/bodhi-tree.jpg`. The 3:2 frame matches the other tiles, with English and Marathi accessible labels. This is illustrative imagery.
 
 Final generation prompt:
 
 > Use case: photorealistic-natural. Asset: landscape 3:2 image for the nature tile of a peaceful Buddhist community NGO website. A beautiful sacred fig tree (Ficus religiosa, Bodhi tree), recognizable heart-shaped leaves with long tapering drip tips, graceful light gray trunk and spreading green canopy in a quiet Indian garden. Centered tree composition with generous breathing room, full crown and base visible. Soft morning light, subtle atmospheric background, warm ivory earth and muted sage olive green foliage. Refined natural editorial photography, realistic botanical details. Peaceful, understated and harmonious, matching pale sandstone Buddha imagery. No people, no text, no logos, no watermarks. Not a depiction of a specific actual NGO location.
 
-## Jayanti section portrait
-
-The dedicated Jayanti section uses `assets/ambedkar-jayanti.jpg` (original: `assets/ambedkar-jayanti.png`), generated with the built-in image generation tool using the user-provided Festival Wishes portrait as inspiration. The community tile retains its separate portrait. The new image was visually inspected and retains its 3:2 proportions.
-
-Final generation prompt:
-
-> Use the supplied image as visual inspiration, not as an edit target. Create a new original commemorative portrait of Dr. Babasaheb Ambedkar for an NGO website's dedicated Jayanti section. Retain the reference's recognizable three-quarter pose looking gently to the right, distinctive round thin-rimmed glasses, neatly combed hair, blue suit, white shirt and tie, and dignified expression. Adapt into a refined realistic painted portrait, subtle fine-paper texture, warm ivory and pale sage background, muted navy suit, understated warm halo-like illumination behind the head. Portrait positioned slightly left of center, full head with generous breathing room, shoulders and chest visible, soft tonal foliage impressions toward the right. Landscape 3:2 frame designed to fit beside separate live webpage headings. Peaceful, elegant, respectful, restrained. No text, no dates, no quotation, no lettering, no logos, no watermark, no orange banner, no purple backdrop. This is an illustrated tribute, not an archival photograph.
-
 ## Current Jayanti image — supplied image cleanup
 
-The Jayanti section now uses `assets/jai-bhim-clean.jpg`, with source output at `assets/jai-bhim-clean.png`. Edited using the built-in image generation tool from the user's attached image. The full 1712:919 image is displayed without additional cropping.
+The Jayanti section now uses `assets/jai-bhim-clean.jpg`. Edited using the built-in image generation tool from the user's attached image. The full 1712:919 image is displayed without additional cropping.
 
 Final edit prompt:
 
