@@ -53,14 +53,30 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let changingSlide = false;
 let autoplayTimer;
 let manuallyPaused = false;
-function scheduleSlide() {
+const slideTransitions = [
+  { enter: 'translateX(12%) translateZ(-140px) rotateY(-16deg) scale(0.92)', exit: 'translateX(-10%) translateZ(-100px) rotateY(12deg) scale(0.94)' },
+  { enter: 'translateX(-12%) translateZ(-140px) rotateY(16deg) scale(0.92)', exit: 'translateX(10%) translateZ(-100px) rotateY(-12deg) scale(0.94)' },
+  { enter: 'translateY(12%) translateZ(-120px) rotateX(14deg)', exit: 'translateY(-10%) translateZ(-100px) rotateX(-12deg)' },
+  { enter: 'translateZ(-180px) scale(0.88)', exit: 'translateZ(60px) scale(1.06)' },
+  { enter: 'translateZ(-100px) rotateZ(-4deg) scale(0.94)', exit: 'translateZ(-80px) rotateZ(4deg) scale(0.96)' },
+];
+let lastTransition = -1;
+function chooseTransition() {
+  // Choose a different effect each time, without changing the photo order.
+  const choices = slideTransitions.map((_, index) => index)
+    .filter(index => index !== lastTransition);
+  lastTransition = choices[Math.floor(Math.random() * choices.length)];
+  return slideTransitions[lastTransition];
+}
+function scheduleSlide(delay = 3500) {
   clearTimeout(autoplayTimer);
   if (sliderPhotos.length > 1 && !manuallyPaused && !reducedMotion.matches &&
       !document.hidden && !viewer.open && !slider.matches(':hover, :focus-within')) {
     autoplayTimer = setTimeout(async () => {
+      const started = performance.now();
       await showSlide(slideIndex + 1);
-      scheduleSlide();
-    }, 4500);
+      scheduleSlide(Math.max(0, 3500 - (performance.now() - started)));
+    }, typeof delay === 'number' ? delay : 3500);
   }
 }
 async function showSlide(index) {
@@ -78,9 +94,18 @@ async function showSlide(index) {
     nextImage.setAttribute('aria-hidden', 'true');
     sliderStage.append(nextImage);
     if (!reducedMotion.matches) {
-      await nextImage.animate([{ opacity: 0 }, { opacity: 1 }], {
-        duration: 700, easing: 'ease-in-out',
-      }).finished;
+      const effect = chooseTransition();
+      const timing = { duration: 850, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' };
+      await Promise.all([
+        nextImage.animate([
+          { opacity: 0, transform: effect.enter },
+          { opacity: 1, transform: 'none' },
+        ], timing).finished,
+        sliderImage.animate([
+          { opacity: 1, transform: 'none' },
+          { opacity: 0, transform: effect.exit },
+        ], timing).finished,
+      ]);
     }
     sliderImage.remove();
     nextImage.id = 'slider-image';
