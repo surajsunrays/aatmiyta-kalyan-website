@@ -21,13 +21,27 @@
   margin: 42px auto 0;
   padding: 0 24px;
 }
-.nursery-banner img {
+.slider-stage {
+  position: relative;
+  height: clamp(280px, 52vw, 600px);
+  background: #151515;
+  border-radius: 8px;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+.slider-stage:focus-visible {
+  outline: 3px solid #9aab7c;
+  outline-offset: 5px;
+}
+.slider-stage img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: contain;
 }
-.nursery-banner figcaption {
+.slider-caption {
   text-align: center;
   color: var(--muted);
   font-size: 14px;

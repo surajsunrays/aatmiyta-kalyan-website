@@ -1,5 +1,9 @@
 // Translation keys match English text nodes, preserving markup and event handlers.
 const marathi = {
+  "Nursery image slider": "रोपवाटिकेची छायाचित्र मालिका",
+  "Use left and right arrow keys to browse photos": "छायाचित्रे पाहण्यासाठी डावी आणि उजवी बाण कळ वापरा",
+  "Previous photo": "मागील छायाचित्र",
+  "Next photo": "पुढील छायाचित्र",
   "View nursery photo 1 in full size": "रोपवाटिकेचे छायाचित्र 1 पूर्ण आकारात पाहा",
   "View nursery photo 2 in full size": "रोपवाटिकेचे छायाचित्र 2 पूर्ण आकारात पाहा",
   "View nursery photo 3 in full size": "रोपवाटिकेचे छायाचित्र 3 पूर्ण आकारात पाहा",
