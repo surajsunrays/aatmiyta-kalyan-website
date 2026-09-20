@@ -756,7 +756,8 @@ body.modal-open {
     min-height: 680px;
     align-items: flex-start;
     padding: 55.7865px 7% 170px;
-    background-position: 64% top;
+    background-position: 80% top;
+    background-attachment: scroll;
   }
   .hero:before {
     background: linear-gradient(90deg, #f6f6ebed, #f6f6eba6 55%, #f6f6eb1a);

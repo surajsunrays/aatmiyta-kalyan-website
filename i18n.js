@@ -1,5 +1,8 @@
 // Translation keys match English text nodes, preserving markup and event handlers.
 const marathi = {
+  "Chhatrapati Shivaji Maharaj Jayanti": "छत्रपती शिवाजी महाराज जयंती",
+  "Honouring a legacy of courage, leadership, and service to the people.": "शौर्य, नेतृत्व आणि लोकसेवेच्या वारशाला अभिवादन.",
+  "Courage & leadership": "शौर्य आणि नेतृत्व",
   "Nursery image slider": "रोपवाटिकेची छायाचित्र मालिका",
   "Use left and right arrow keys to browse photos": "छायाचित्रे पाहण्यासाठी डावी आणि उजवी बाण कळ वापरा",
   "Previous photo": "मागील छायाचित्र",
@@ -327,6 +330,11 @@ const marathi = {
     "आत्मीयता कल्याण संस्था चिंचखेड खुर्द, अकोट, अकोला, महाराष्ट्र येथे धम्म, सामुदायिक उत्सव आणि निसर्गसंवर्धनाच्या माध्यमातून समाजाला एकत्र आणते.",
 };
 const marathiDetails = {
+  shivaji: [
+    "१९ फेब्रुवारी · वार्षिक उत्सव",
+    "छत्रपती शिवाजी महाराज जयंती",
+    "छत्रपती शिवाजी महाराजांच्या शौर्य, नेतृत्व आणि रयतेविषयीच्या आस्थेला आम्ही अभिवादन करतो. प्रामाणिकपणा, जबाबदारी आणि सर्वांविषयी आदर बाळगून समाजाची सेवा करण्याची प्रेरणा त्यांच्या जीवनातून मिळते.",
+  ],
   nursery: [
     "निसर्गाची काळजी",
     "एकेका रोपासोबत, एकत्र वाढूया.",

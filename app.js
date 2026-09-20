@@ -21,6 +21,11 @@ document.addEventListener("keydown", (e) => {
   }
 });
 const details = {
+  shivaji: [
+    "19 FEBRUARY · ANNUAL OBSERVANCE",
+    "Chhatrapati Shivaji Maharaj Jayanti",
+    "We honour Chhatrapati Shivaji Maharaj and his legacy of courage, leadership, and care for the people. His life inspires us to serve our community with integrity, responsibility, and respect for all.",
+  ],
   nursery: [
     "CARE FOR NATURE",
     "Growing together, one plant at a time.",
