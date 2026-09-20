@@ -23,8 +23,11 @@ document.querySelectorAll("[data-gallery]").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
     const photo = viewer.querySelector("img");
+    const thumbnail = link.querySelector("img");
     photo.src = link.href;
-    photo.alt = link.querySelector("img").alt;
+    photo.alt = thumbnail.alt;
+    photo.setAttribute("width", thumbnail.getAttribute("width"));
+    photo.setAttribute("height", thumbnail.getAttribute("height"));
     viewer.showModal();
     document.body.classList.add("modal-open");
   });
