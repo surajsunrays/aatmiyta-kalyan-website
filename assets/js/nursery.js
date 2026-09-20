@@ -46,7 +46,7 @@ viewer.addEventListener("close", () =>
 const slider = document.querySelector(".nursery-slider");
 const sliderPhotos = [
   ...document.querySelectorAll("[data-gallery] img"),
-].filter((photo) => photo.getAttribute("src").startsWith("gallery/"));
+].filter((photo) => photo.getAttribute("src").startsWith("assets/images/gallery/"));
 let sliderImage = document.querySelector("#slider-image");
 const sliderStage = slider.querySelector(".slider-stage");
 let slideIndex = 0;

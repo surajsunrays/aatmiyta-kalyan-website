@@ -10,15 +10,15 @@ Requires Node.js. No dependencies to install.
 npm run dev
 ```
 
-Open http://localhost:5173. Set `PORT` to change the port. Run `npm run check` to validate JavaScript syntax. For deployment, serve `index.html`, `style.css`, `app.js`, and `assets/` using any static host. Google Fonts are optional; system fonts provide a fallback.
+Open http://localhost:5173. Set `PORT` to change the port. Run `npm run check` to validate JavaScript syntax. For deployment, serve `index.html`, `assets/css/style.css`, `assets/js/app.js`, and `assets/` using any static host. Google Fonts are optional; system fonts provide a fallback.
 
 ## Content
 
-Edit page content in `index.html` and celebration detail text in `app.js`. Observance dates are not announced event schedules. The map links to the village rather than claiming an exact Vihar pin. Add verified contact details, programme timings, real activity photographs, and donation information when available. The home page does not collect personal data. The donation page previews donor details locally; see Donation page below. The hero image is illustrative AI-generated imagery, not a photograph of the NGO's actual Vihar.
+Edit page content in `index.html` and celebration detail text in `assets/js/app.js`. Observance dates are not announced event schedules. The map links to the village rather than claiming an exact Vihar pin. Add verified contact details, programme timings, real activity photographs, and donation information when available. The home page does not collect personal data. The donation page previews donor details locally; see Donation page below. The hero image is illustrative AI-generated imagery, not a photograph of the NGO's actual Vihar.
 
 ## Image asset
 
-Generated using the built-in image generation tool. Optimized website version: `assets/buddha.jpg`.
+Generated using the built-in image generation tool. Optimized website version: `assets/images/buddha.jpg`.
 
 Final generation prompt:
 
@@ -30,11 +30,11 @@ JavaScript syntax checks and internal anchor checks passed. In-app browser verif
 
 ## Languages
 
-Use the EN / मराठी header toggle to switch between English and Marathi. The preference is stored locally when browser storage is available. Static translations and celebration details live in `i18n.js`; keep them updated when changing English content. The toggle updates the document language, title, description, and accessibility labels. Devanagari font fallbacks are included for offline use.
+Use the EN / मराठी header toggle to switch between English and Marathi. The preference is stored locally when browser storage is available. Static translations and celebration details live in `assets/js/i18n.js`; keep them updated when changing English content. The toggle updates the document language, title, description, and accessibility labels. Devanagari font fallbacks are included for offline use.
 
 ## Dhamma card image
 
-Generated with the built-in image generation tool. Optimized site asset: `assets/dhamma-buddha.jpg`. The card preserves the image’s 3:2 ratio to show the complete statue on desktop and mobile. This is illustrative imagery.
+Generated with the built-in image generation tool. Optimized site asset: `assets/images/dhamma-buddha.jpg`. The card preserves the image’s 3:2 ratio to show the complete statue on desktop and mobile. This is illustrative imagery.
 
 Final generation prompt:
 
@@ -42,7 +42,7 @@ Final generation prompt:
 
 ## Community tile portrait
 
-Built-in image generation produced the illustrated Dr. Babasaheb Ambedkar portrait. Optimized site image: `assets/ambedkar.jpg`. Uses a 3:2 frame and an English/Marathi accessible label.
+Built-in image generation produced the illustrated Dr. Babasaheb Ambedkar portrait. Optimized site image: `assets/images/ambedkar.jpg`. Uses a 3:2 frame and an English/Marathi accessible label.
 
 Final generation prompt:
 
@@ -50,7 +50,7 @@ Final generation prompt:
 
 ## Nature tile image
 
-Generated with the built-in image generation tool. Optimized website image: `assets/bodhi-tree.jpg`. The 3:2 frame matches the other tiles, with English and Marathi accessible labels. This is illustrative imagery.
+Generated with the built-in image generation tool. Optimized website image: `assets/images/bodhi-tree.jpg`. The 3:2 frame matches the other tiles, with English and Marathi accessible labels. This is illustrative imagery.
 
 Final generation prompt:
 
@@ -58,7 +58,7 @@ Final generation prompt:
 
 ## Current Jayanti image — supplied image cleanup
 
-The Jayanti section now uses `assets/jai-bhim-clean.jpg`. Edited using the built-in image generation tool from the user's attached image. The full 1712:919 image is displayed without additional cropping.
+The Jayanti section now uses `assets/images/jai-bhim-clean.jpg`. Edited using the built-in image generation tool from the user's attached image. The full 1712:919 image is displayed without additional cropping.
 
 Final edit prompt:
 
@@ -78,6 +78,6 @@ The QR uses the requested amount; a payment app may allow the donor to change it
 
 Donor name/email/city remain in memory and form fields in this tab; they are not sent to a server, stored in localStorage, or included in the QR. Browser autofill may retain fields according to the visitor's own browser settings. Only the language preference is stored by the site.
 
-QR encoding runs locally with vendored `qrcode-generator` 1.4.4 (`assets/qrcode-generator.js`, MIT license notice retained). No donor information is sent to a third-party QR service.
+QR encoding runs locally with vendored `qrcode-generator` 1.4.4 (`assets/js/qrcode-generator.js`, MIT license notice retained). No donor information is sent to a third-party QR service.
 
 Run `npm run check` and `npm test`. Tests cover invalid amounts, decimal precision, donor validation, safe demo mode, live URI fields, and missing configuration. Browser visual QA was unavailable in this session.

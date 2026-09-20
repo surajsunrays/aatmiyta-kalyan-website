@@ -144,7 +144,7 @@ nav a.active:after {
 .hero {
   /* Anchor the background at the top to keep the Buddha’s head visible. */
   min-height: max(600px, 60.6667vw);
-  background: #e9eadf url("assets/buddha.jpg") center top / cover no-repeat;
+  background: #e9eadf url("../images/buddha.jpg") center top / cover no-repeat;
   background-attachment: fixed;
   position: relative;
   display: flex;
@@ -363,7 +363,7 @@ h2 em {
 .dhamma-art {
   height: auto;
   aspect-ratio: 3 / 2;
-  background: #e9eadf url("assets/dhamma-buddha.jpg") center / cover no-repeat;
+  background: #e9eadf url("../images/dhamma-buddha.jpg") center / cover no-repeat;
 }
 .dhamma-art .art-symbol {
   display: none;
@@ -381,7 +381,7 @@ h2 em {
 .celebration-art {
   height: auto;
   aspect-ratio: 3 / 2;
-  background: #ece5d8 url("assets/ambedkar.jpg") center / cover no-repeat;
+  background: #ece5d8 url("../images/ambedkar.jpg") center / cover no-repeat;
 }
 .art-symbol {
   font-size: 125px;
@@ -409,7 +409,7 @@ h2 em {
 .nursery-art {
   height: auto;
   aspect-ratio: 3 / 2;
-  background: #e3e8d6 url("assets/bodhi-tree.jpg") center / cover no-repeat;
+  background: #e3e8d6 url("../images/bodhi-tree.jpg") center / cover no-repeat;
 }
 .card-body {
   padding: 25px 23px;
@@ -1110,7 +1110,7 @@ header .brand small {
 }
 .jayanti-portrait {
   aspect-ratio: 1712 / 919;
-  background: #efe0ab url("assets/jai-bhim-clean.jpg") center / contain
+  background: #efe0ab url("../images/jai-bhim-clean.jpg") center / contain
     no-repeat;
   border-radius: 7px;
 }
