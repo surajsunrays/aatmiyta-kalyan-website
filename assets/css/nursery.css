@@ -1,6 +1,6 @@
 .nursery-intro {
   text-align: center;
-  background: #f1f3eb;
+  background: radial-gradient(ellipse at top, #faf3df, var(--sage));
 }
 .nursery-intro > .underlink {
   margin-bottom: 28px;
@@ -65,13 +65,14 @@
   margin: 0;
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
   overflow: hidden;
   transition: transform 0.3s ease;
 }
 .nursery-photo:hover,
 .nursery-photo:focus-within {
-  transform: scale(1.1);
+  transform: translateY(-4px);
   z-index: 1;
 }
 .nursery-photo > a {

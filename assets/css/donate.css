@@ -3,7 +3,7 @@
 }
 .donation-heading {
   text-align: center;
-  background: #edf0e5;
+  background: radial-gradient(ellipse at top, #faf3df, var(--sage));
   padding-top: 55px;
   padding-bottom: 50px;
 }
@@ -48,9 +48,9 @@
   min-width: 0;
   padding: 35px;
   border: 1px solid var(--line);
-  border-radius: 16px;
-  background: #fffefa;
-  box-shadow: 0 12px 45px #33452208;
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
 }
 .donation-panel h2 {
   font-size: 34px;
@@ -130,7 +130,8 @@
 }
 .amount-options button[aria-pressed="true"],
 .amount-options button:hover {
-  background: #edf0e5;
+  background: var(--green);
+  color: white;
   border-color: var(--green);
 }
 .form-error {

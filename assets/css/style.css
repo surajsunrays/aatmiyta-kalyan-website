@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Libre+Caslon+Display&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500&display=swap");
 :root {
-  --paper: #fffefa;
-  --ink: #303a30;
-  --green: #657653;
-  --muted: #62675d;
-  --line: #e5e7dd;
+  --paper: #fcfaf5;
+  --ink: #253c32;
+  --green: #365e49;
+  --muted: #606b62;
+  --line: #dedfd4;
+  --surface: #ffffff;
+  --sage: #eef2e8;
+  --gold: #ac8544;
+  --shadow: 0 12px 36px rgb(37 60 50 / 7%);
   --serif: "Libre Caslon Display", Georgia, serif;
 }
 * {
@@ -145,7 +149,7 @@ nav a.active:after {
   /* Anchor the background at the top to keep the Buddha’s head visible. */
   min-height: max(600px, 60.6667vw);
   background: #e9eadf url("../images/buddha.jpg") center top / cover no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   position: relative;
   display: flex;
   align-items: center;
@@ -1265,4 +1269,104 @@ html[lang="mr"] .jayanti-motto {
   .course-card .button {
     gap: 18px;
   }
+}
+
+/* Warm ivory surfaces, forest accents and consistent component depth. */
+::selection { background: #dce7d4; color: #253c32; }
+.topline {
+  background: #253c32;
+  color: #f1f3e7;
+  min-height: 34px;
+  height: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+header { border-bottom: 1px solid var(--line); }
+nav a { transition: color 0.2s; }
+nav a.active:after { width: 100%; background: var(--gold); }
+.button {
+  min-height: 46px;
+  box-shadow: 0 5px 14px rgb(37 60 50 / 10%);
+  font-weight: 600;
+}
+.button:hover { background: #284936; }
+.language-toggle, .menu-toggle { min-height: 44px; background: var(--surface); }
+.hero:before {
+  background: linear-gradient(90deg, rgb(252 250 245 / 94%), rgb(252 250 245 / 78%) 36%, rgb(252 250 245 / 8%) 76%);
+}
+.hero-content { max-width: 690px; }
+.hero h1 { font-size: clamp(46px, 4.6vw, 72px); line-height: 1.12; }
+.hero p { color: #46584b; }
+.hero-foot {
+  border-top: 1px solid rgb(54 94 73 / 20%);
+  padding-top: 22px;
+  width: fit-content;
+}
+.hero-foot small { color: #56634f; }
+.tiny-line { background: var(--gold); width: 32px; }
+.values-strip { background: var(--sage); padding-top: 30px; padding-bottom: 30px; }
+.values-strip i { color: var(--green); }
+.section {
+  padding-top: clamp(56px, 6.5vw, 100px);
+  padding-bottom: clamp(56px, 6.5vw, 100px);
+}
+.work, .courses { background: #f3f3eb; }
+.work-card, .course-card {
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.work-card {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.card-body { display: flex; flex: 1; flex-direction: column; padding: 28px; }
+.card-body .underlink { margin-top: auto; padding-top: 18px; }
+.art-tag {
+  border-radius: 999px;
+  background: rgb(252 250 245 / 95%);
+  color: var(--ink);
+  padding: 8px 13px;
+}
+.event { padding-left: 12px; padding-right: 12px; transition: background 0.2s; }
+.event-date { background: var(--sage); border: 1px solid var(--line); border-radius: 12px; }
+.event-type { color: var(--muted); }
+.pill { background: var(--sage); color: var(--green); }
+.invitation { background: #253c32; color: var(--paper); }
+.invitation .eyebrow, .invitation em { color: #d8c28c; }
+.invitation p { color: #d8e0d4; }
+.invitation .button { background: #ede3c8; color: #253c32; border-color: #ede3c8; }
+.invitation .button:hover { background: #fff4d8; }
+.invitation-flower { color: rgb(216 224 212 / 7%); }
+.visit-panel {
+  background: radial-gradient(ellipse at top, #faf6e7, #e8eddf);
+  border-color: #d7ddca;
+}
+.jayanti { background: #eef1e9; }
+.jayanti-portrait { border-radius: 16px; box-shadow: var(--shadow); }
+.jayanti-values article {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--gold);
+  border-radius: 0 0 16px 16px;
+  background: rgb(255 255 255 / 60%);
+}
+footer { background: #f1f2e9; padding-top: 38px; padding-bottom: 38px; }
+dialog { border-radius: 20px; box-shadow: 0 24px 80px rgb(25 44 33 / 22%); }
+.close-dialog { min-width: 44px; min-height: 44px; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .work-card:hover { transform: translateY(-5px); box-shadow: 0 20px 42px rgb(37 60 50 / 12%); }
+}
+@media (max-width: 760px) {
+  .hero:before {
+    background: linear-gradient(90deg, rgb(252 250 245 / 96%), rgb(252 250 245 / 85%) 55%, rgb(252 250 245 / 25%));
+  }
+  .hero h1 { font-size: clamp(38px, 7.5vw, 52px); }
+  .hero-content { min-width: 0; }
+  .hero { padding-bottom: 100px; }
+  .values-strip { padding-top: 22px; padding-bottom: 22px; }
+  .event { padding-left: 0; padding-right: 0; }
+  .card-body { padding: 24px; }
+  .jayanti-values article { padding: 22px; }
 }
