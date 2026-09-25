@@ -19,24 +19,46 @@ document.addEventListener("keydown", (event) => {
 });
 document.querySelector("#year").textContent = new Date().getFullYear();
 const viewer = document.querySelector("#photo-dialog");
-document.querySelectorAll("[data-gallery]").forEach((link) => {
+const galleryLinks = [...document.querySelectorAll("[data-gallery]")];
+let photoIndex = 0;
+document.querySelector("#gallery-count").textContent = galleryLinks.length;
+function showPhoto(index) {
+  photoIndex = (index + galleryLinks.length) % galleryLinks.length;
+  const link = galleryLinks[photoIndex];
+  const photo = viewer.querySelector("img");
+  const thumbnail = link.querySelector("img");
+  photo.src = link.href;
+  photo.alt = thumbnail.alt;
+  photo.setAttribute("width", thumbnail.getAttribute("width"));
+  photo.setAttribute("height", thumbnail.getAttribute("height"));
+  document.querySelector("#photo-counter").textContent =
+    `${String(photoIndex + 1).padStart(2, "0")} / ${galleryLinks.length}`;
+}
+galleryLinks.forEach((link, index) => {
   link.addEventListener("click", (event) => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
-    const photo = viewer.querySelector("img");
-    const thumbnail = link.querySelector("img");
-    photo.src = link.href;
-    photo.alt = thumbnail.alt;
-    photo.setAttribute("width", thumbnail.getAttribute("width"));
-    photo.setAttribute("height", thumbnail.getAttribute("height"));
+    showPhoto(index);
     viewer.showModal();
     document.body.classList.add("modal-open");
   });
+});
+viewer.querySelector(".viewer-prev").addEventListener("click", () => showPhoto(photoIndex - 1));
+viewer.querySelector(".viewer-next").addEventListener("click", () => showPhoto(photoIndex + 1));
+viewer.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+    event.preventDefault();
+    showPhoto(photoIndex + (event.key === "ArrowRight" ? 1 : -1));
+  }
 });
 viewer
   .querySelector(".close-dialog")
   .addEventListener("click", () => viewer.close());
 viewer.addEventListener("click", (event) => {
-  if (event.target === viewer) viewer.close();
+  if (event.target !== viewer) return;
+  const bounds = viewer.getBoundingClientRect();
+  if (event.clientX < bounds.left || event.clientX > bounds.right ||
+      event.clientY < bounds.top || event.clientY > bounds.bottom) viewer.close();
 });
 viewer.addEventListener("close", () =>
   document.body.classList.remove("modal-open"),

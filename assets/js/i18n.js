@@ -1,5 +1,11 @@
 // Translation keys match English text nodes, preserving markup and event handlers.
 const marathi = {
+  "A living collection": "निसर्गाचा जिवंत ठेवा",
+  "Small moments. A greener world.": "छोटे क्षण. अधिक हिरवे जग.",
+  "moments from our nursery": "आमच्या रोपवाटिकेतील क्षण",
+  "Take a closer look.": "जवळून पाहा.",
+  "Previous photo": "मागील छायाचित्र",
+  "Next photo": "पुढील छायाचित्र",
   "Chhatrapati Shivaji Maharaj Jayanti": "छत्रपती शिवाजी महाराज जयंती",
   "Honouring a legacy of courage, leadership, and service to the people.": "शौर्य, नेतृत्व आणि लोकसेवेच्या वारशाला अभिवादन.",
   "Courage & leadership": "शौर्य आणि नेतृत्व",
